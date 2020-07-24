@@ -23,7 +23,7 @@ class CashRegister
     if @discount = 0 
       return "There is no discount to apply."
     else
-      @total = @total.float * (@discount/100)
+      @total = @total.float * ((@discount - 100)/100)
     end
   end
 
