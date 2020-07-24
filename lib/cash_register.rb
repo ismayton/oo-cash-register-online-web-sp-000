@@ -12,7 +12,6 @@ class CashRegister
   
   def add_item(item, quantity = 1)
     quantity.times {@items << item}
-    end
   end 
   
   def apply_discount
