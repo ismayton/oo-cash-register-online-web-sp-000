@@ -11,7 +11,7 @@ class CashRegister
     @total 
   end 
   
-  def add_item(item, quantity)
+  def add_item(item, quantity = 1)
     while quantity > 0 do
       @items << item
       quantity -= 1 
