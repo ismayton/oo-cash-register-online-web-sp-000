@@ -40,6 +40,7 @@ class CashRegister
   
   def void_last_transaction
     @items.pop()
+    binding.pry
     if @items.size == 0 
       @total = 0 
     end
