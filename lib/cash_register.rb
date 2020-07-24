@@ -6,6 +6,7 @@ class CashRegister
   def initialize(discount = 0)
     @total = 0.0
     @items = []
+    @last = {}
     @discount = discount
   end
   
@@ -18,7 +19,7 @@ class CashRegister
       @items << item
       quantity -= 1
       @total += price
-      
+      @last[item] = price
     end
   end 
   
@@ -40,6 +41,7 @@ class CashRegister
   
   def void_last_transaction
     @items.pop()
+    @total -= @last[item]
     binding.pry
     if @items.size == 0 
       @total = 0 
