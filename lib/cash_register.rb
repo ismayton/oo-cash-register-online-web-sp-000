@@ -23,7 +23,7 @@ class CashRegister
     if @discount = 0 
       return "There is no discount to apply."
     else
-      puts "Success!"
+      @total = @total.float * (@discount/100)
     end
   end
 
