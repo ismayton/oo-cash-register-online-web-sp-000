@@ -29,7 +29,7 @@ class CashRegister
       discount_rate = (100.to_f - @discount) / 100.to_f
       after_discount = total * discount_rate
       @total = after_discount
-      return "After the discount, the total comes to $#{total}"
+      return "After the discount, the total comes to $#{@total}"
     end
   end
 
