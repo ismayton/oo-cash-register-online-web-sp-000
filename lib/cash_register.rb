@@ -11,8 +11,7 @@ class CashRegister
   end 
   
   def add_item(item, quantity = 1)
-    quantity.times do
-      @items << item
+    quantity.times {@items << item}
     end
   end 
   
