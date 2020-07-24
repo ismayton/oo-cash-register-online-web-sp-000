@@ -26,6 +26,7 @@ class CashRegister
       return "There is no discount to apply."
     else
       total = @total.to_f
+      binding.pry
       total = total * ((@discount - 100) / 100)
       @total = total
       return "After the discount, the total comes to $#{total}"
