@@ -30,8 +30,7 @@ class CashRegister
     else
       total = @total.to_f
       discount_rate = (100.to_f - @discount) / 100.to_f
-      after_discount = total * discount_rate
-      @total = after_discount.to_i
+      @total = total * discount_rate
       return "After the discount, the total comes to $#{@total}."
     end
   end
@@ -41,10 +40,8 @@ class CashRegister
   end
   
   def void_last_transaction
-    
     @items.pop()
     @total -= @last.pop()
-    binding.pry
     if @items.size == 0 
       @total = 0.0  
     end
